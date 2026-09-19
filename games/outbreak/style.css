@@ -1,0 +1,139 @@
+.outbreak-game {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #f3ead8;
+  background: #120c0a;
+  font: 14px/1.4 "IBM Plex Mono", ui-monospace, monospace;
+}
+.outbreak-world {
+  position: absolute;
+  inset: 0;
+  filter: grayscale(0.25) contrast(1.08) saturate(0.72);
+}
+.outbreak-world::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 50% 18%, transparent 20%, rgba(12, 6, 4, 0.38) 78%),
+    linear-gradient(180deg, rgba(90, 12, 8, 0.12), transparent 28%, rgba(8, 4, 2, 0.28));
+  mix-blend-mode: multiply;
+}
+.outbreak-hud {
+  position: absolute;
+  inset: 14px 16px auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  z-index: 2;
+}
+.outbreak-hud span {
+  margin-right: auto;
+  background: rgba(16, 8, 6, 0.88);
+  color: #f3ead8;
+  padding: 8px 10px;
+  border: 1px solid #7a2a1c;
+  box-shadow: 3px 3px 0 #3a120c;
+}
+.outbreak-hud button {
+  pointer-events: auto;
+}
+.outbreak-game button,
+.outbreak-loading button {
+  font: inherit;
+  cursor: pointer;
+  padding: 9px 13px;
+  border: 2px solid #f3ead8;
+  background: #1a100c;
+  color: #f3ead8;
+}
+.outbreak-game button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.outbreak-game button.rf-frame-primary {
+  background: #ccff00;
+  color: #111;
+  border-color: #111;
+}
+.outbreak-hint {
+  position: absolute;
+  bottom: 50px;
+  left: 16px;
+  right: 16px;
+  margin: 0;
+  text-align: center;
+  background: rgba(16, 8, 6, 0.9);
+  border: 1px solid #7a2a1c;
+  color: #f3ead8;
+  font-size: 11px;
+  pointer-events: none;
+  z-index: 2;
+  padding: 6px 8px;
+}
+.outbreak-mobile-hint { display: none; }
+.outbreak-game table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 18px 0;
+}
+.outbreak-game th,
+.outbreak-game td {
+  padding: 8px 4px;
+  border-bottom: 1px solid #3a241c;
+}
+.outbreak-game label { display: block; margin: 16px 0; }
+.outbreak-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #3a241c;
+}
+.outbreak-item small { display: block; margin-top: 3px; color: #cbb79a; }
+.outbreak-reward { text-align: center; }
+.outbreak-reward > span { font-size: 56px; display: block; margin-bottom: 8px; }
+.outbreak-reward button { margin: 6px; }
+.outbreak-loading {
+  height: 100%;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  background: #120c0a;
+  color: #f3ead8;
+}
+.outbreak-banner {
+  position: absolute;
+  top: 58px;
+  left: 16px;
+  z-index: 2;
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: #7a2a1c;
+  color: #fff7e8;
+  pointer-events: none;
+}
+.outbreak-game [role="status"],
+.outbreak-game [role="alert"] { margin-top: 12px; }
+@media (max-width: 520px) {
+  .outbreak-hud { inset: 8px 8px auto; gap: 5px; font-size: 10px; }
+  .outbreak-hud button { padding: 7px; }
+  .outbreak-hud span { padding: 6px; }
+  .outbreak-hint { bottom: 44px; font-size: 10px; }
+  .outbreak-mobile-hint { display: inline; }
+  .outbreak-desktop-hint { display: none; }
+  .outbreak-banner { top: 50px; left: 8px; }
+}

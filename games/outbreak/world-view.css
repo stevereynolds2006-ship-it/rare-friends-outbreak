@@ -1,0 +1,6 @@
+.rf-world-view{position:absolute;inset:0;display:grid;place-items:center;overflow:hidden;background:#fff;color:#000}
+.rf-world-surface{position:relative;flex:none}.rf-world-surface canvas{display:block;width:100%;height:100%;touch-action:none;image-rendering:pixelated;outline-offset:-3px}
+.rf-world-prompt{position:absolute;transform:translate(-50%,0);border:2px solid #000;background:#fff;color:#000;padding:8px 12px;font:700 13px/1.2 monospace;white-space:nowrap;cursor:pointer}
+.rf-world-prompt small{display:block;margin-top:4px;font-size:10px;font-weight:400}.rf-world-prompt:disabled{cursor:default;background:#fff;color:#666;border-color:#888;pointer-events:none}.rf-world-prompt:enabled{background:#ccff00}
+.rf-world-loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;padding:24px;text-align:center}.rf-world-loading button{border:2px solid #000;padding:10px 18px;background:#ccff00;cursor:pointer}
+@media(max-width:520px){.rf-world-prompt{font-size:11px;padding:6px;min-height:44px}.rf-world-prompt small{font-size:9px}}
