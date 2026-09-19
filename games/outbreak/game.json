@@ -1,0 +1,15 @@
+{
+  "name": "Rare Friends: Outbreak",
+  "consumable": "Raid Kit",
+  "price": "1000000000000000000",
+  "outcomes": [
+    { "name": "Empty Can", "chanceBps": 1500, "reward": "0" },
+    { "name": "Scrap Metal", "chanceBps": 2800, "reward": "250000000000000000" },
+    { "name": "Medkit", "chanceBps": 2200, "reward": "500000000000000000" },
+    { "name": "Ammo Cache", "chanceBps": 1400, "reward": "750000000000000000" },
+    { "name": "Fuel Drum", "chanceBps": 900, "reward": "1500000000000000000" },
+    { "name": "Safehouse Key", "chanceBps": 600, "reward": "2500000000000000000" },
+    { "name": "Gold Tooth", "chanceBps": 400, "reward": "5000000000000000000" },
+    { "name": "Genesis Relic", "chanceBps": 200, "reward": "10000000000000000000" }
+  ]
+}
